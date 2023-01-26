@@ -10,6 +10,10 @@ body {
   padding: 50px;
 }
 
+button {
+  cursor: pointer;
+}
+
 .contaner {
   background-color: #fff;
   border-radius: 15px;
@@ -82,16 +86,87 @@ body {
   padding: 5px;
   border-collapse: collapse;
   margin: -3px;
-  border: 1px solid #ccc;
+  border: 1px solid #eee;
 }
 .contaner header .titel {
   font-size: 50px;
   text-transform: uppercase;
 }
+.contaner main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
 .contaner main .titel {
+  min-width: 100%;
   padding: 45px 0px 25px;
   font-size: 50px;
   text-align: center;
+}
+.contaner main table {
+  min-width: 800px;
+  border-collapse: collapse;
+}
+.contaner main table thead {
+  color: #ccc;
+  text-align: left;
+}
+.contaner main table thead th {
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+.contaner main table tbody tr {
+  border-top: 1px solid #eee;
+}
+.contaner main table tbody tr td {
+  padding: 30px 0;
+  color: #111;
+}
+.contaner main table tbody tr td .prod {
+  display: flex;
+  align-items: center;
+}
+.contaner main table tbody tr td .prod .info {
+  padding-left: 15px;
+}
+.contaner main table tbody tr td .prod .info span {
+  display: block;
+  color: #111;
+}
+.contaner main table tbody tr td .prod .info span:last-child {
+  color: #ccc;
+}
+.contaner main table tbody tr td .qty {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+  border-radius: 15px;
+  width: 80px;
+}
+.contaner main table tbody tr td .qty button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 7px;
+}
+.contaner main table tbody tr td .qty button:hover {
+  background-color: #fff;
+}
+.contaner main table tbody tr td button {
+  cursor: pointer;
+  background-color: #eee;
+  border: 0;
+  font-size: 18px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 1px solid transparent;
+}
+.contaner main table tbody tr td button:hover {
+  border: 1px dotted;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */
