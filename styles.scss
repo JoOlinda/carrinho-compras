@@ -20,6 +20,7 @@ body{
 .contaner{
     background-color: $bg-primary;
     border-radius: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     header{
         background-color: $bg-secondary;
         color: $text-secondary;
@@ -27,7 +28,7 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-around;
-        padding: 20px 0;
+        padding: 10px 0;
         nav{
             color: $text-primary;
             display: flex;
@@ -47,9 +48,26 @@ body{
                         color: $text-secondary;
                         padding: 0 10px;
                     }
+                    &:hover ul{
+                        display: flex !important;
                     }
-                #dropdown{
-                    display: none;     
+                }
+                #dropdown{ 
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    background-color: $bg-secondary;
+                    min-width:85px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    padding: 12px 0 0;
+                    li{ 
+                        margin: 0;
+                        padding: 10px 0;
+                        border-top: 2px dotted #eee;
+                        a{
+                            padding: 5px 21px 5px 10px;
+                        }
+                    }    
                 }
                 
             }
