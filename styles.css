@@ -30,6 +30,7 @@ body {
   justify-content: space-between;
   text-transform: uppercase;
   font-size: 16px;
+  min-width: 230px;
 }
 .contaner header nav ul {
   display: inline-flex;
@@ -86,6 +87,11 @@ body {
 .contaner header .titel {
   font-size: 50px;
   text-transform: uppercase;
+}
+.contaner main .titel {
+  padding: 45px 0px 25px;
+  font-size: 50px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
