@@ -8,6 +8,7 @@
 $bg-primary: #fff;
 $bg-secondary: #111;
 $bg-gray: #eee;
+$bg-darkgray: #bbb;
 
 $text-primary: #eee;
 $text-secondary: #ccc;
@@ -17,14 +18,16 @@ body{
     background-color: #eee;
     padding: 50px;
 }
-button{
+button{ 
     cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
 }
 .contaner{
     background-color: $bg-primary;
     border-radius: 15px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    header{
+    >header{
         background-color: $bg-secondary;
         color: $text-secondary;
         border-radius: 10px 10px 0px 0px;
@@ -100,10 +103,10 @@ button{
             text-transform: uppercase;
         }
     }
-    main{
+    >main{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
         padding-bottom: 20px;
         .titel{
             min-width: 100%;
@@ -111,76 +114,132 @@ button{
             font-size: 50px;
             text-align: center;
         }
-        table{
-            min-width: 800px;
-            border-collapse: collapse;
-            thead{
-                color: $text-secondary;
-                text-align: left;
-                th{
-                   padding: 10px 0; 
-                   text-transform: uppercase;
-                }    
-            }
-            tbody{
-               tr{
-                border-top: 1px solid $bg-gray;
-                td{
-                    padding: 30px 0;
-                    color: #111;
-                    .prod{
-                        display: flex;
-                        align-items: center;
-                        .info{
-                            padding-left: 15px;
-                            span{
-                                display: block;
-                                color: $bg-secondary;
-                                &:last-child{
-                                    color: $text-secondary;
+        section{
+            min-width: 50%;
+            table{
+                min-width: 100%;
+                border-collapse: collapse;
+                thead{
+                    color: $text-secondary;
+                    text-align: left;
+                    th{
+                       padding: 10px 0; 
+                       text-transform: uppercase;
+                    }    
+                }
+                tbody{
+                   tr{
+                    border-top: 1px solid $bg-gray;
+                    td{
+                        padding: 30px 0;
+                        color: #111;
+                        .prod{
+                            display: flex;
+                            align-items: center;
+                            .info{
+                                padding-left: 15px;
+                                span{
+                                    display: block;
+                                    color: $bg-secondary;
+                                    &:last-child{
+                                        color: $text-secondary;
+                                    }
+                                }
+                                  
+                            }
+                            
+                        }
+                        .qty{
+                            overflow: hidden;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            background-color: $bg-gray;
+                            border-radius: 15px;
+                            width: 80px;
+                            button{
+                                cursor: pointer;
+                                background-color: transparent;
+                                border: 0;
+                                padding: 7px;
+                                &:hover{
+                                    background-color: $bg-primary;
                                 }
                             }
-                              
                         }
-                        
-                    }
-                    .qty{
-                        overflow: hidden;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        background-color: $bg-gray;
-                        border-radius: 15px;
-                        width: 80px;
                         button{
                             cursor: pointer;
-                            background-color: transparent;
+                            background-color: $bg-gray;
                             border: 0;
-                            padding: 7px;
+                            font-size: 18px;
+                            border-radius: 50%;
+                            padding: 5px ;
+                            border: 1px solid transparent;
                             &:hover{
+                                border: 1px dotted;
                                 background-color: $bg-primary;
                             }
-                        }
+                        } 
                     }
-                    button{
-                        cursor: pointer;
-                        background-color: $bg-gray;
-                        border: 0;
-                        font-size: 18px;
-                        border-radius: 50%;
-                        padding: 5px ;
-                        border: 1px solid transparent;
-                        &:hover{
-                            border: 1px dotted;
-                            background-color: $bg-primary;
-                        }
-                    } 
+                } 
                 }
-            } 
+                
             }
-            
         }
+        article{
+            min-width: 25%;
+            color: #333;
+            header{
+                background-color: $bg-gray;
+                font-size: 18px;
+                text-align: start;
+                border-bottom: 1px solid $bg-primary;
+                padding: 20px 30px;
+            }
+            main{
+                background-color: $bg-gray;
+                padding: 10px 0;
+                div{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 15px 30px;
+                    align-self: center;
+                }
+                button{
+                    background-color: transparent;
+                    border: 0;
+                    color: rgb(32, 161, 32);
+                    display: flex;
+                    align-items: center;
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                }
+            }
+            footer{
+                background-color: $bg-darkgray;
+                padding: 15px 30px;
+                display: flex;
+                text-transform: uppercase;
+                justify-content: space-between;
+            }
+            >button{
+                margin-top: 5px;                
+                border: 0;
+                background-color: rgb(32, 161, 32);
+                min-width: 100%;
+                min-height: 46px;
+                color: $text-primary;
+                font-size: 18px;
+                text-transform: uppercase;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+        
 
         
     }
+
 }

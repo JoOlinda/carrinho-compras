@@ -12,6 +12,8 @@ body {
 
 button {
   cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 
 .contaner {
@@ -19,7 +21,7 @@ button {
   border-radius: 15px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
-.contaner header {
+.contaner > header {
   background-color: #111;
   color: #ccc;
   border-radius: 10px 10px 0px 0px;
@@ -28,7 +30,7 @@ button {
   justify-content: space-around;
   padding: 10px 0;
 }
-.contaner header nav {
+.contaner > header nav {
   color: #eee;
   display: flex;
   justify-content: space-between;
@@ -36,25 +38,25 @@ button {
   font-size: 16px;
   min-width: 230px;
 }
-.contaner header nav ul {
+.contaner > header nav ul {
   display: inline-flex;
   list-style: none;
 }
-.contaner header nav ul li {
+.contaner > header nav ul li {
   margin-left: 5px;
 }
-.contaner header nav ul li:first-child {
+.contaner > header nav ul li:first-child {
   margin-left: 0;
 }
-.contaner header nav ul li a {
+.contaner > header nav ul li a {
   text-decoration: none;
   color: #ccc;
   padding: 0 10px;
 }
-.contaner header nav ul li:hover ul {
+.contaner > header nav ul li:hover ul {
   display: flex !important;
 }
-.contaner header nav ul #dropdown {
+.contaner > header nav ul #dropdown {
   display: none;
   flex-direction: column;
   position: absolute;
@@ -63,15 +65,15 @@ button {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 0 0;
 }
-.contaner header nav ul #dropdown li {
+.contaner > header nav ul #dropdown li {
   margin: 0;
   padding: 10px 0;
   border-top: 2px dotted #eee;
 }
-.contaner header nav ul #dropdown li a {
+.contaner > header nav ul #dropdown li a {
   padding: 5px 21px 5px 10px;
 }
-.contaner header nav button {
+.contaner > header nav button {
   background-color: transparent;
   color: #ccc;
   border: 0;
@@ -82,62 +84,65 @@ button {
   cursor: pointer;
   margin-right: 8px;
 }
-.contaner header nav .infor-car span {
+.contaner > header nav .infor-car span {
   padding: 5px;
   border-collapse: collapse;
   margin: -3px;
   border: 1px solid #eee;
 }
-.contaner header .titel {
+.contaner > header .titel {
   font-size: 50px;
   text-transform: uppercase;
 }
-.contaner main {
+.contaner > main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-bottom: 20px;
 }
-.contaner main .titel {
+.contaner > main .titel {
   min-width: 100%;
   padding: 45px 0px 25px;
   font-size: 50px;
   text-align: center;
 }
-.contaner main table {
-  min-width: 800px;
+.contaner > main section {
+  min-width: 50%;
+}
+.contaner > main section table {
+  min-width: 100%;
   border-collapse: collapse;
 }
-.contaner main table thead {
+.contaner > main section table thead {
   color: #ccc;
   text-align: left;
 }
-.contaner main table thead th {
+.contaner > main section table thead th {
   padding: 10px 0;
   text-transform: uppercase;
 }
-.contaner main table tbody tr {
+.contaner > main section table tbody tr {
   border-top: 1px solid #eee;
 }
-.contaner main table tbody tr td {
+.contaner > main section table tbody tr td {
   padding: 30px 0;
   color: #111;
 }
-.contaner main table tbody tr td .prod {
+.contaner > main section table tbody tr td .prod {
   display: flex;
   align-items: center;
 }
-.contaner main table tbody tr td .prod .info {
+.contaner > main section table tbody tr td .prod .info {
   padding-left: 15px;
 }
-.contaner main table tbody tr td .prod .info span {
+.contaner > main section table tbody tr td .prod .info span {
   display: block;
   color: #111;
 }
-.contaner main table tbody tr td .prod .info span:last-child {
+.contaner > main section table tbody tr td .prod .info span:last-child {
   color: #ccc;
 }
-.contaner main table tbody tr td .qty {
+.contaner > main section table tbody tr td .qty {
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -146,16 +151,16 @@ button {
   border-radius: 15px;
   width: 80px;
 }
-.contaner main table tbody tr td .qty button {
+.contaner > main section table tbody tr td .qty button {
   cursor: pointer;
   background-color: transparent;
   border: 0;
   padding: 7px;
 }
-.contaner main table tbody tr td .qty button:hover {
+.contaner > main section table tbody tr td .qty button:hover {
   background-color: #fff;
 }
-.contaner main table tbody tr td button {
+.contaner > main section table tbody tr td button {
   cursor: pointer;
   background-color: #eee;
   border: 0;
@@ -164,9 +169,60 @@ button {
   padding: 5px;
   border: 1px solid transparent;
 }
-.contaner main table tbody tr td button:hover {
+.contaner > main section table tbody tr td button:hover {
   border: 1px dotted;
   background-color: #fff;
+}
+.contaner > main article {
+  min-width: 25%;
+  color: #333;
+}
+.contaner > main article header {
+  background-color: #eee;
+  font-size: 18px;
+  text-align: start;
+  border-bottom: 1px solid #fff;
+  padding: 20px 30px;
+}
+.contaner > main article main {
+  background-color: #eee;
+  padding: 10px 0;
+}
+.contaner > main article main div {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  align-self: center;
+}
+.contaner > main article main button {
+  background-color: transparent;
+  border: 0;
+  color: rgb(32, 161, 32);
+  display: flex;
+  align-items: center;
+}
+.contaner > main article main button:hover {
+  opacity: 0.7;
+}
+.contaner > main article footer {
+  background-color: #bbb;
+  padding: 15px 30px;
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-between;
+}
+.contaner > main article > button {
+  margin-top: 5px;
+  border: 0;
+  background-color: rgb(32, 161, 32);
+  min-width: 100%;
+  min-height: 46px;
+  color: #eee;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.contaner > main article > button:hover {
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=styles.css.map */
